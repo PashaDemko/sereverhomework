@@ -13,7 +13,7 @@ module.exports = (function(){
     userRouter.use('/a', adminRouter);
     userRouter.get('/:id', userHandler.profile);
     userRouter.post('/', userHandler.createUser);
-    userRouter.post('/:id', userHandler.edit);
+    userRouter.put('/:id', userHandler.edit);
 
     userRouter.post(friend, userHandler.addfriend);
     userRouter.delete(friend, userHandler.delfriend);
